@@ -1,0 +1,323 @@
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~
+$ cd ~
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~
+$ cd desktop
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop
+$ cd programacion
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion
+$ git init TallerGit
+Initialized empty Git repository in C:/Users/nelso/Desktop/Programacion/TallerGit/.git/
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion
+$ git config --global user.name "Nelson Holguin"
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion
+$ git config --global user.email "nelson.holguin@correounivalle.edu.co
+> git config --global user.email "nelson.holguin@correounivalle.edu.co"
+> git config --global user.email "nelson.holguin@correounivalle.edu.co
+git config --global user.email "nelson.holguin@correounivalle.edu.co"
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion
+$ git remote add origin https://github.com/Wavin13/TallerGit.git
+fatal: not a git repository (or any of the parent directories): .git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion
+$ cd TallerGit
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git remote add origin https://github.com/Wavin13/TallerGit.git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ echo "Texto inicial" > archivo.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git add archivo.txt
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -m "Commit inicial"
+[feature (root-commit) 538e027] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ echo "Texto agregado en feature" >> archivo.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -am "Segundo commit en feature"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[feature 90e458a] Segundo commit en feature
+ 1 file changed, 1 insertion(+)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ echo "Texto agregado por tercera vez" >> archivo.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -m "Tercer commit en feature"
+On branch feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   archivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -am "Tercer commit en feature"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[feature 02dfcf7] Tercer commit en feature
+ 1 file changed, 1 insertion(+)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout 'master'
+error: pathspec 'master' did not match any file(s) known to git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git branch
+* feature
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git branch
+* feature
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ ^C
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git branch
+  feature
+* master
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git merge feature
+Already up to date.
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git reset --hard HEAD~1
+HEAD is now at 90e458a Segundo commit en feature
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git rebase feature
+Successfully rebased and updated refs/heads/master.
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (hotfix)
+$ echo "Correcion urgente" >> archivo.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (hotfix)
+$ git commit -am "Hotfix"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[hotfix 4506b7c] Hotfix
+ 1 file changed, 1 insertion(+)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (hotfix)
+$ git checkout master
+Switched to branch 'master'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git cherry-pick hotfix
+[master 7394ee4] Hotfix
+ Date: Fri Oct 4 19:59:21 2024 -0500
+ 1 file changed, 1 insertion(+)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ echo "Cambio en feature" > conflicto.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -am "Cambio en feature"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        conflicto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout master
+Switched to branch 'master'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ echo "Cambio en master" > conflicto.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git commit -am "Cambio en maste"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        conflicto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git merge feature
+Already up to date.
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git reflog
+7394ee4 (HEAD -> master) HEAD@{0}: checkout: moving from feature to master
+02dfcf7 (feature) HEAD@{1}: checkout: moving from master to feature
+7394ee4 (HEAD -> master) HEAD@{2}: cherry-pick: Hotfix
+02dfcf7 (feature) HEAD@{3}: checkout: moving from hotfix to master
+4506b7c (hotfix) HEAD@{4}: commit: Hotfix
+02dfcf7 (feature) HEAD@{5}: checkout: moving from master to hotfix
+02dfcf7 (feature) HEAD@{6}: rebase (finish): returning to refs/heads/master
+02dfcf7 (feature) HEAD@{7}: rebase (start): checkout feature
+90e458a HEAD@{8}: reset: moving to HEAD~1
+02dfcf7 (feature) HEAD@{9}: checkout: moving from feature to master
+02dfcf7 (feature) HEAD@{10}: commit: Tercer commit en feature
+90e458a HEAD@{11}: commit: Segundo commit en feature
+538e027 HEAD@{12}: commit (initial): Commit inicial
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ ^C
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$  echo "Cambio en feature" > conflicto.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -am "Cambio en feature"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        conflicto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git add conflicto.txt
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git commit -am "Cambio en feature"
+[feature 0ee4581] Cambio en feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflicto.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (feature)
+$ git checkout master
+Switched to branch 'master'
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ echo "Cambio en master" > conflicto.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git commit -am "Cambio en master"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        conflicto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git add conflicto.txt
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git commit -am "Cambio en master"
+[master 5cf09a4] Cambio en master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflicto.txt
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git merge feature
+Auto-merging conflicto.txt
+CONFLICT (add/add): Merge conflict in conflicto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      conflicto.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master|MERGING)
+$ git commit -am "El conflicto lo resolvi juntando todo en una sola linea"
+[master be84a27] El conflicto lo resolvi juntando todo en una sola linea
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git push -u origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ ^C
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git remote -v
+origin  https://github.com/Wavin13/TallerGit.git (fetch)
+origin  https://github.com/Wavin13/TallerGit.git (push)
+
+Wavin - PC@DESKTOP-TOEES36 MINGW64 ~/desktop/programacion/TallerGit (master)
+$ git push -u origin master
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (21/21), 1.80 KiB | 921.00 KiB/s, done.
+Total 21 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Wavin13/TallerGit/pull/new/master
+remote:
+To https://github.com/Wavin13/TallerGit.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
